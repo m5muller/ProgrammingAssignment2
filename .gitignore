@@ -1,0 +1,65 @@
+makeCacheMatrix <- function(x = matrix()) {
+m <- NULL ## where m is the stored inverse
+set <- function(y){
+x <<- y ## where x is the original input into makeCasheMatrix and y replaces x
+m <<- NULL ##So y's inverse can be stored in place of x's
+}
+get <- function() x ##print the matrix made by makeCacheMatrix
+setinverse <- function(solve) m <<- solve
+getinverse <- function() m
+list (set = set, get = get, setinverse = setinverse, getinverse = getinverse)
+}
+makeCacheMatrix(1:4, 2, 2)
+test <- makeCacheMatrix(1:4)
+test
+ls()
+rm(list=ls())
+test$set(1:4, 2, 2)
+makeCacheMatrix <- function(x = matrix()) {
+m <- NULL ## where m is the stored inverse
+set <- function(y){
+x <<- y ## where x is the original input into makeCasheMatrix and y replaces x
+m <<- NULL ##So y's inverse can be stored in place of x's
+}
+get <- function() x ##print the matrix made by makeCacheMatrix
+setinverse <- function(solve) m <<- solve
+getinverse <- function() m
+list (set = set, get = get, setinverse = setinverse, getinverse = getinverse)
+}
+test <- makeCacheMatrix()
+test$set(1:4, 2, 2)
+test$set(1:4)
+test$set(1)
+test$get()
+test$set(1:4)
+test$get()
+makeCacheMatrix <- function(x = matrix()) {
+m <- NULL ## where m is the stored inverse
+set <- function(y = matrix()){
+x <<- y ## where x is the original input into makeCasheMatrix and y replaces x
+m <<- NULL ##So y's inverse can be stored in place of x's
+}
+get <- function() x ##print the matrix made by makeCacheMatrix
+setinverse <- function(solve) m <<- solve
+getinverse <- function() m
+list (set = set, get = get, setinverse = setinverse, getinverse = getinverse)
+}
+test <- makeCacheMatrix()
+test$set(1:4)
+test$get()
+rm(list=ls())
+getwd()
+source("cachematrix.R")
+ls()
+list.files()
+getwd("~/ProgrammingAssignment2")
+setwd("~/ProgrammingAssignment2")
+setwd("~/R/Coursera-r/ProgrammingAssignment2")
+source("cachematrix.R")
+makeCacheMatrix(matrix(1:4,2,2))
+test <- makeCacheMatrix(matrix(1:4,2,2))
+test$get()
+cacheSolve(test)
+test$getinverse()
+makeCachematrix(test)
+cacheSolve(test)
